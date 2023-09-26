@@ -4,9 +4,9 @@
 define("DB_HOST", "localhost");
 define("DB_NAME", "avaliacoes");
 define("DB_USER", "root");
-define("DB_PASSWORD", "");
+define("DB_PASSWORD", "bancodedados");
 
 //Constante com url do sistema
-define("BASE_URL", "/3TDS/trab.Avaliações")
+define("BASE_URL", "/3TDS/TrabAvaliacao")
 
 ?>

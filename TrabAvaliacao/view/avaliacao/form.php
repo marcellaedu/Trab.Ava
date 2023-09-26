@@ -57,10 +57,7 @@
                 </select>
             </div>
 
-           
-        </div>
-
-        <div class="form-group">
+            <div class="form-group">
             <label for="txtGenero" >Genero </label>
             <select  id="txtGenero" name="genero" class="form-control">
                 <option value="">---Selecione---</option>
@@ -78,6 +75,11 @@
                 
             </select>
         </div>
+
+           
+        </div>
+
+        
 
         <input type="hidden" name="id" value="<?php echo ($avaliacao ? $avaliacao->getId() : 0);?>" />
 

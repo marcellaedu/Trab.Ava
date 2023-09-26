@@ -42,12 +42,12 @@ require(__DIR__ . "/../include/header.php");
                 <td><?= $a->getTipo()->getTipo(); ?></td>
                 <td><?= $a->getGenero(); ?></td>
                 <td><a href="alterar.php?idAvaliacao=<?= $a->getId() ?>"> 
-                       
+                       Alterar
                     </a>
                 </td>
                 <td><a href="excluir.php?idAvaliacao=<?= $a->getId() ?>"
                        onclick="return confirm('Confirma a exclusão?');" > 
-                       
+                       Excluir
                     </a>
                 </td>
             </tr>
