@@ -42,17 +42,18 @@ class AvaliacaoDAO {
     public function update(Avaliacao $avaliacao) {
         $conn = Connection::getConnection();
 
-        $sql = "UPDATE avaliacao SET nome_pessoa = ?, nome_entretenimento = ?,". 
-            " data_publicacao = ?, id_genero = ?, id_tipo, avaliacao = ? ".
-            " WHERE id = ?";
+        $sql = "UPDATE avaliacao SET nome_pessoa = ?, nome_entretenimento = ?, data_publicacao = ?, id_genero = ?, id_tipo = ?, avaliacao = ? WHERE id = ?";
         $stmt = $conn->prepare($sql);
-        $stmt->execute([$avaliacao->getNomePessoa(),
-                        $avaliacao->getNomeEntretenimento(), 
-                        $avaliacao->getDataPublicacao(), 
-                        $avaliacao->getGenero()->getId(),
-                        $avaliacao->getTipo()->getId(),
-                        $avaliacao->getAva()]);
-                    }
+        $stmt->execute([
+            $avaliacao->getNomePessoa(),
+            $avaliacao->getNomeEntretenimento(), 
+            $avaliacao->getDataPublicacao(), 
+            $avaliacao->getGenero()->getId(),
+            $avaliacao->getTipo()->getId(),
+            $avaliacao->getAva(),
+            $avaliacao->getId() 
+        ]);
+    }
 
     public function deleteById(int $id) {
         $conn = Connection::getConnection();
@@ -66,13 +67,10 @@ class AvaliacaoDAO {
     public function findById(int $id) {
         $conn = Connection::getConnection();
 
-        $sql ="SELECT a.*," . 
-            " t.tipo AS tipo " . 
-            " g.genero AS genero " . 
-            " FROM avaliacao a" .
-            " JOIN tipo t ON (t.id = a.id_tipo)" . 
-            " JOIN genero g ON (g.id = a.id_genero)" . 
-            " WHERE a.id = ?";
+        $sql ="SELECT a.*, t.tipo AS tipo, g.genero AS genero FROM avaliacao a" .
+        " JOIN tipo t ON (t.id = a.id_tipo)" . 
+        " JOIN genero g ON (g.id = a.id_genero)" . 
+        " WHERE a.id = ?";
 
         $stmt = $conn->prepare($sql);
         $stmt->execute([$id]);
@@ -97,6 +95,7 @@ class AvaliacaoDAO {
     
         foreach($result as $reg) {
             $avaliacao = new Avaliacao();
+            $avaliacao->setId($reg['id']);
             $avaliacao->setNomePessoa($reg['nome_pessoa']);
             $avaliacao->setNomeEntretenimento($reg['nome_entretenimento']);
             $avaliacao->setDataPublicacao(($reg['data_publicacao']));

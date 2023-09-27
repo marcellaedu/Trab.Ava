@@ -10,11 +10,11 @@ if(isset($_GET['idAvaliacao']))
 
 //Carregar o avaliacao 
 $avaliacaoCont = new AvaliacaoController();   
-$avaliacao = $avaliacaoCont->buscarPorId($idAluno);
+$avaliacao = $avaliacaoCont->buscarPorId($idAvaliacao);
 
 //Verificar se o avaliacao existe
 if(! $avaliacao) {
-    echo "Avaliacao não encontrado!<br>";
+    echo "Avaliacao não encontrada!<br>";
     echo "<a href='listar.php'>Voltar</a>";
     exit;
 }

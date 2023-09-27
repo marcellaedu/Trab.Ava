@@ -15,8 +15,8 @@ if(isset($_POST['submetido'])) {
     //Usuário clicou no botão gravar (submeteu o formulário)
     //Captura os campo do formulário
     $nomePessoa = trim($_POST['nomePessoa']) ? trim($_POST['nomePessoa']) : null;
-    $nomeEntretenimento = $_POST['nomeEntretenimento'] ? $_POST['nomeEntretenimento'] : null;
-    $data = trim($_POST['data']) ? trim($_POST['data']) : null;
+    $nomeEntretenimento = trim($_POST['nomeEntretenimento']) ? trim($_POST['nomeEntretenimento']) : null;
+    $data = ($_POST['data']) ? ($_POST['data']) : null;
     $idTipo = is_numeric($_POST['tipo']) ? $_POST['tipo'] : null;
     $idGenero = is_numeric($_POST['genero']) ? $_POST['genero'] : null;
     $ava = trim($_POST['ava']) ? trim($_POST['ava']) : null;
@@ -24,6 +24,7 @@ if(isset($_POST['submetido'])) {
     $idAvaliacao = $_POST['id'];
     
     $avaliacao = new Avaliacao();
+    $avaliacao->setId($idAvaliacao);
     $avaliacao->setNomePessoa($nomePessoa);
     $avaliacao->setNomeEntretenimento($nomeEntretenimento);
     $avaliacao->setDataPublicacao($data);

@@ -11,7 +11,9 @@
     $generos = $generoCont->listar();
 
 ?>
-    <h2>Inserir avaliações</h2>
+    <h2><?php echo (!$avaliacao || $avaliacao->getId() <= 0 ? 'Inserir' : 'Alterar') ?> Avaliações</h2>
+
+    
 
     <form id="frmAvalicao" method="POST" >
 
@@ -76,10 +78,6 @@
             </select>
         </div>
 
-           
-        </div>
-
-        
 
         <input type="hidden" name="id" value="<?php echo ($avaliacao ? $avaliacao->getId() : 0);?>" />
 

@@ -29,6 +29,7 @@ require(__DIR__ . "/../include/header.php");
             <th>Data de Publicação</th>
             <th>Tipo</th>
             <th>Genero</th>
+            <th>Avaliação</th>
             <th>Alterar</th>
             <th>Excluir</th>
         </tr>
@@ -41,6 +42,7 @@ require(__DIR__ . "/../include/header.php");
                 <td><?= $a->getDataPublicacao(); ?></td>
                 <td><?= $a->getTipo()->getTipo(); ?></td>
                 <td><?= $a->getGenero(); ?></td>
+                <td><?= $a->getAva(); ?></td>
                 <td><a href="alterar.php?idAvaliacao=<?= $a->getId() ?>"> 
                        Alterar
                     </a>
