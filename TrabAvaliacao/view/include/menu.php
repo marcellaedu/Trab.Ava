@@ -1,8 +1,8 @@
 <?php
 require_once(__DIR__ . "/../../util/config.php");
 ?>
-<nav class="navbar navbar-expand-md navbar-light bg-info">
-    <a class="navbar-brand" href="#">Avaliações</a>
+<nav class="navbar navbar-expand-md navbar-light" style="background-color:#141E46;">
+    <a class="navbar-brand" style="color: #FF6969" href="#">Avaliações</a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" 
             data-target="#navSite">
@@ -12,16 +12,16 @@ require_once(__DIR__ . "/../../util/config.php");
     <div class="collapse navbar-collapse" id="navSite">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="<?= BASE_URL ?>/index.php">Home</a>
+                <a class="nav-link" style="color: #FF6969" href="<?= BASE_URL ?>/index.php">Home</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navDropDown" data-toggle="dropdown">Cadastros</a>
+                <a class="nav-link dropdown-toggle" style="color: #FF6969" href="#" id="navDropDown" data-toggle="dropdown">Cadastros</a>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#" >Avaliações</a>
+                    <a class="dropdown-item" style="color: #FF6969" href="#" >Avaliações</a>
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Sobre</a>
+                <a class="nav-link" style="color: #FF6969" href="#">Sobre</a>
             </li>
         </ul>
     </div>
