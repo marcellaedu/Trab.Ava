@@ -11,7 +11,7 @@
     $generos = $generoCont->listar();
 
 ?>
-    <h2 class="mt-2" style="text-align: center; color:#141E46;"><?php echo (!$avaliacao || $avaliacao->getId() <= 0 ? 'Inserir' : 'Alterar') ?> Avaliações</h2>
+    <h2 class="mt-2" style="text-align: center; color:#141E46;"><?php echo (!$avaliacao || $avaliacao->getId() <= 0 ? 'Faça sua' : 'Altere sua') ?> Avaliação</h2>
 
     
 
@@ -40,14 +40,14 @@
 
         <div class="form-group">
             <label for="txtAvaliacao" style="align-self: flex-start;color: #FF4500;font-weight: 600;">
-            Qual a sua Avaliacao:</label>
+            Gostaria de ouvir sua opinião ou avaliação sobre o entretenimento,</label>
             <input type="text" name="ava" id="txtAvaliacao" class="form-control" 
                 value="<?php echo ($avaliacao ? $avaliacao->getAva() : '');?>" />
         </div>
         
         <div class="form-group">
             <label for="txtTipo" style="align-self: flex-start;color: #FF4500;font-weight: 600;">
-            Tipo de entretenimento:</label>
+            Qual o tipo de entretenimento?</label>
             <select  id="txtTipo" name="tipo" class="form-control">
             <option value="">Selecione</option>
             <?php foreach($tipos as $t): ?>
@@ -65,7 +65,7 @@
             </div>
 
             <div class="form-group">
-            <label for="txtGenero" style="align-self: flex-start;color: #FF4500;font-weight: 600;">Genêro: </label>
+            <label for="txtGenero" style="align-self: flex-start;color: #FF4500;font-weight: 600;">A que gênero pertence esse entretenimento? </label>
             <select  id="txtGenero" name="genero" class="form-control">
                 <option value="">Selecione</option>
             <?php foreach($generos as $g): ?>

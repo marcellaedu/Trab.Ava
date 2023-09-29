@@ -9,12 +9,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!--<link rel="stylesheet" href="index.css">
     @section css { <link rel="stylesheet" href="/assets/index.css" /> } -->
+
     <style>
         body {
             background: linear-gradient(-45deg, #FF6969, #FFF5E0, #FF6969);
             background-size: 400% 400%;
             animation: gradient 15s ease infinite;
             height: 100vh;
+            font-family:  'Merriweather', serif;;
         }
 
         @keyframes gradient {

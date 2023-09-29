@@ -14,7 +14,7 @@ include_once(__DIR__ . "/view/include/header.php");
                 <li class="list-group-item">
                     <a href="<?= BASE_URL ?>/view/avaliacao/listar.php" 
                         class="card-link">
-                        Listagem de Avaliações</a>
+                         Avaliações do Mês</a> 
                 </li>
             </ul>
         </div>

@@ -9,33 +9,33 @@ class AvaliacaoService {
         
         //Validar o nome
         if(! $avaliacao->getNomePessoa()) {
-            array_push($erros, "Informe o nome!");
+            array_push($erros, "Por favor, nos informe seu nome.");
         }
 
         //Validar o nome
         if(! $avaliacao->getNomeEntretenimento()) {
-            array_push($erros, "Informe o nome do entretenimento!");
+            array_push($erros, "Por favor, forneça o nome do entretenimento.");
         }
 
 
         //Validar data de publicação
         if(! $avaliacao->getDataPublicacao()) {
-            array_push($erros, "Informe a data de publicação!");
+            array_push($erros, "Qual é a data que você esta fazendo essa publicação?");
         }
 
          //Validar genero
          if(! $avaliacao->getGenero()) {
-            array_push($erros, "Informe o genero da publicação!");
+            array_push($erros, "Poderia especificar o gênero da publicação?");
         }
 
          //Validar tipo
          if(! $avaliacao->getTipo()) {
-            array_push($erros, "Informe o tipo da publicação!");
+            array_push($erros, "Poderia especificar o tipo da publicação?");
         }
 
          //Validar avaliacao
          if(! $avaliacao->getAva()) {
-            array_push($erros, "Escreva a avaliacao do entretenimento! ");
+            array_push($erros, "Compartilhe sua avaliação ou opinião sobre o entretenimento. ");
         }
 
         
