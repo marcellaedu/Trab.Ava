@@ -26,7 +26,7 @@ require_once(__DIR__ . "/../../util/config.php");
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" style="color: #FF6969" href="#">Sobre</a>
+                <a class="nav-link" style="color: #FF6969" href="<?= BASE_URL ?>/view/avaliacao/sobre.php">Sobre</a>
             </li>
         </ul>
     </div>

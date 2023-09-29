@@ -18,35 +18,35 @@
     <form id="frmAvalicao" method="POST" >
 
         <div class="form-group">
-            <label for="txtNomePessoa" style="align-self: flex-start;color: #FF4500;font-weight: 600;">
+            <label for="txtNomePessoa" style="align-self: flex-start;color: #FF6969;font-weight: 600;">
             Qual seu nome?</label>
             <input type="text" name="nomePessoa" id="txtNomePessoa" class="form-control"
                value="<?php echo ($avaliacao ? $avaliacao->getNomePessoa() : ''); ?>"/>
         </div>
         
         <div class="form-group">
-            <label for="txtNomeEntretenimento"  style="align-self: flex-start;color: #FF4500;font-weight: 600;">
+            <label for="txtNomeEntretenimento"  style="align-self: flex-start;color:  #FF6969;font-weight: 600;">
             Qual o nome do entretenimento?</label>
             <input type="text" name="nomeEntretenimento" id="txtnomeEntretenimento" class="form-control"
             value="<?php echo ($avaliacao ? $avaliacao->getNomeEntretenimento() : '');?>"/>
         </div>
         
         <div class="form-group">
-            <label for="txtDataPublicacao" style="align-self: flex-start;color: #FF4500;font-weight: 600;">
+            <label for="txtDataPublicacao" style="align-self: flex-start;color:  #FF6969;font-weight: 600;">
             Qual a data de sua Publicacao:</label>
             <input type="date" name="data" id="txtDataPublicacao" class="form-control" 
                 value="<?php echo ($avaliacao ? $avaliacao->getDataPublicacao() : '');?>" />
         </div>
 
         <div class="form-group">
-            <label for="txtAvaliacao" style="align-self: flex-start;color: #FF4500;font-weight: 600;">
-            Gostaria de ouvir sua opinião ou avaliação sobre o entretenimento,</label>
+            <label for="txtAvaliacao" style="align-self: flex-start;color:  #FF6969;font-weight: 600;">
+            Gostaria de ouvir sua opinião ou avaliação sobre o entretenimento:</label>
             <input type="text" name="ava" id="txtAvaliacao" class="form-control" 
                 value="<?php echo ($avaliacao ? $avaliacao->getAva() : '');?>" />
         </div>
         
         <div class="form-group">
-            <label for="txtTipo" style="align-self: flex-start;color: #FF4500;font-weight: 600;">
+            <label for="txtTipo" style="align-self: flex-start;color:  #FF6969;font-weight: 600;">
             Qual o tipo de entretenimento?</label>
             <select  id="txtTipo" name="tipo" class="form-control">
             <option value="">Selecione</option>
@@ -65,7 +65,7 @@
             </div>
 
             <div class="form-group">
-            <label for="txtGenero" style="align-self: flex-start;color: #FF4500;font-weight: 600;">A que gênero pertence esse entretenimento? </label>
+            <label for="txtGenero" style="align-self: flex-start;color:  #FF6969;font-weight: 600;">A que gênero pertence esse entretenimento? </label>
             <select  id="txtGenero" name="genero" class="form-control">
                 <option value="">Selecione</option>
             <?php foreach($generos as $g): ?>
