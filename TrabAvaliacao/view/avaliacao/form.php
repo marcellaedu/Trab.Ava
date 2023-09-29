@@ -49,7 +49,7 @@
             <label for="txtTipo" style="align-self: flex-start;color: #FF4500;font-weight: 600;">
             Tipo de entretenimento:</label>
             <select  id="txtTipo" name="tipo" class="form-control">
-            <option value="">---Selecione---</option>
+            <option value="">Selecione</option>
             <?php foreach($tipos as $t): ?>
                         <option value="<?= $t->getId(); ?>"
                             <?php 
@@ -65,9 +65,9 @@
             </div>
 
             <div class="form-group">
-            <label for="txtGenero" style="align-self: flex-start;color: #FF4500;font-weight: 600;">Genero </label>
+            <label for="txtGenero" style="align-self: flex-start;color: #FF4500;font-weight: 600;">Genêro: </label>
             <select  id="txtGenero" name="genero" class="form-control">
-                <option value="">---Selecione---</option>
+                <option value="">Selecione</option>
             <?php foreach($generos as $g): ?>
                         <option value="<?= $g->getId(); ?>"
                             <?php 
