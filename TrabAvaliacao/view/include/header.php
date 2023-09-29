@@ -11,7 +11,7 @@
     @section css { <link rel="stylesheet" href="/assets/index.css" /> } -->
     <style>
         body {
-            background: linear-gradient(-45deg, #FF6969, #141e46a4, #FFF5E0, #FF6969);
+            background: linear-gradient(-45deg, #FF6969, #FFF5E0, #FF6969);
             background-size: 400% 400%;
             animation: gradient 15s ease infinite;
             height: 100vh;
