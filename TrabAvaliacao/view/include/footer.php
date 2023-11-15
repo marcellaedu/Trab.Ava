@@ -1,7 +1,7 @@
 </div> <!-- Fecha a DIV container aberta no header.php -->
   
   <!-- Footer -->
-  <footer class="mt-5" style="background-color:#141E46; color: #FF6969; position:fixed; bottom:0; left:0; right:0;">
+  <footer>
         <div class="text-center p-4">
         © 2023 Copyright:
         <a href="https://foz.ifpr.edu.br"

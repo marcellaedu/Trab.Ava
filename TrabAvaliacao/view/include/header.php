@@ -12,26 +12,49 @@
 
     <style>
         body {
-            background: linear-gradient(-45deg, #FF6969, #FFF5E0, #FF6969);
+            background-color: #64CCC5;
             background-size: 400% 400%;
-            animation: gradient 15s ease infinite;
             height: 100vh;
-            font-family:  'Merriweather', serif;;
+            /*font-family:  'Merriweather', serif;*/
+        }
+        .txt{
+            color: #001C30;
+            font-size: 30px;
+            font-weight: 1000;
+        }
+        .txt2{
+            color: #001C30;
+
+        }
+        label{
+            align-self: flex-start;
+            color: #001C30;
+            font-weight: 600;
+        }
+        .colors{
+            background-color:#001C30; 
+            color: #64CCC5;
+        }
+        .aval{
+            border-radius: 50px;
+            background-color: #001C30;
+            color: #f6fff6;
+        }
+        .menu{
+            box-shadow: 0px 0px 12px black;
+            background-color:#001C30;
+        }
+        footer{
+            background-color: #64CCC5; 
+            color: #001C30; 
+            font-weight: 500;
+            position:fixed; 
+            bottom:0; 
+            left:0; 
+            right:0;
+            /*box-shadow: 0px 0px 12px white;*/
         }
 
-        @keyframes gradient {
-            0% {
-                background-position: 0% 50%;
-            }
-
-            50% {
-                background-position: 100% 50%;
-            }
-
-            100% {
-                background-position: 0% 50%;
-            }
-        }
     </style>
 
 

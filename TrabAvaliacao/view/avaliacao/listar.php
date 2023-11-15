@@ -15,10 +15,10 @@ $avaliacao = $avaliacaoCont->listar();
 require(__DIR__ . "/../include/header.php");
 ?>
 
-<h4 class="mt-3" style="text-align: center;">Lista das Avaliações do Mês</h4>
+<h2 class="mt-3 txt2" style="text-align: center;">Lista das Avaliações do Mês</h2>
 
 <div>
-    <a class="btn" style="background-color:#141E46; color: #FF6969;" href="inserir.php">Inserir</a>
+    <a class="btn colors" href="inserir.php">Inserir</a>
 </div><br>
 
 <table class="table table-hover">
