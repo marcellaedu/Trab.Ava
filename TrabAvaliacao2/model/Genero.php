@@ -1,9 +1,14 @@
  <?php
 
-class Genero{
+class Genero implements JsonSerializable {
     private ?int $id;
     private ?string $genero;
     private ?Tipo $tipo;
+
+    public function jsonSerialize() : array {
+        return array("id" => $this->id,
+        "genero" => $this->genero,);
+    }
 
 
     public function __toString()

@@ -12,15 +12,15 @@ class GeneroDAO {
         $this->conn = Connection::getConnection();
     }
 
-    public function listByType() {
+    public function listByType($idTipo) {
         $sql = "SELECT g.*, t.tipo AS tipo" . 
         " FROM genero g" .
         " JOIN tipo t ON (t.id = g.id_tipo)" .
         " WHERE g.id_tipo = ?" . 
-        " ORDER BY g.genero";
+        " ORDER BY g.id";
 
         $stm = $this->conn->prepare($sql);
-        $stm->execute();
+        $stm->execute([$idTipo]);
         $result = $stm->fetchAll();
         return $this->mapBancoParaObjeto($result);
     }

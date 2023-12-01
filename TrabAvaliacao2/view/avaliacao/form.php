@@ -49,7 +49,7 @@ $tipos = $tipoCont->listar();
     <div class="form-group">
         <label for="txtTipo">
             Qual o tipo de entretenimento?</label>
-        <select id="txtTipo" name="tipo" class="form-control"   onchange="buscarGenero();">
+        <select id="txtTipo" name="tipo" class="form-control" onchange="buscarGenero();">
             <option value="">Selecione</option>
             <?php foreach ($tipos as $t) : ?>
                 <option value="<?= $t->getId(); ?>" <?php
@@ -68,19 +68,6 @@ $tipos = $tipoCont->listar();
     <div class="form-group">
         <label for="txtGenero">A que gênero pertence esse entretenimento? </label>
         <select id="txtGenero" name="genero" class="form-control">
-            <option value="">Selecione</option>
-            <?php foreach ($generos as $g) : ?>
-                <option value="<?= $g->getId(); ?>" <?php
-                                                    if (
-                                                        $avaliacao && $avaliacao->getGenero() &&
-                                                        $avaliacao->getGenero()->getId() == $g->getId()
-                                                    )
-                                                        echo 'selected';
-                                                    ?>>
-                    <?= $g->getGenero(); ?>
-                </option>
-            <?php endforeach; ?>
-
         </select>
     </div>
 
@@ -89,7 +76,7 @@ $tipos = $tipoCont->listar();
 
     <input type="hidden" name="submetido" value="1" /><br>
     <input type="hidden" id="hddBaseUrl" value="<?= BASE_URL ?>" />                                                   
-    <button type="button" class="btn colors" onclick="inserirAvaliacao();"> Gravar </button>
+    <button type="submit" class="btn colors" > Gravar </button>
     <button class="btn colors" type="reset">Limpar</button>
 
 </form>
@@ -97,6 +84,9 @@ $tipos = $tipoCont->listar();
 <div class="teste mt-3" style=" padding-bottom: 100px;">
     <a class="btn colors" href="listar.php"> Voltar </a>
 </div>
+
+<script src="js/avaliacao.js">
+</script>
 
 <?php
 require_once(__DIR__ . "/../include/footer.php");
