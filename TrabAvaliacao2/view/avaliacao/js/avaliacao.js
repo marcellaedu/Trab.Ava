@@ -12,7 +12,7 @@ const inputGenero = document.getElementById('txtGenero');
 
 const divErros = document.getElementById('divMsgErro');
 
-//buscarGenero();
+buscarGenero();
 function buscarGenero(){
     while(inputGenero.children.length > 0) {
         inputGenero.children[0].remove();
@@ -57,6 +57,15 @@ function criarOptionGenero(desc, valor, valorSelecionado) {
         option.selected = true;
     
     inputGenero.appendChild(option);
+}
+
+function mostrarDescricao(idDescricao) {
+    var divDescricao = document.getElementById(idDescricao);
+    if (divDescricao.style.display === 'none') {
+        divDescricao.style.display = 'block'; // Mostra a descrição correspondente ao botão clicado
+    } else {
+        divDescricao.style.display = 'none'; // Oculta a descrição correspondente ao botão clicado
+    }
 }
 
 

@@ -12,5 +12,5 @@ define("DB_PASSWORD", "");
 //define("BASE_URL", "/PHP2023/TrabAvaliacao2")
 
 //Para o meu not-> 
-define("BASE_URL", "/DesWeb/3TDS/TrabAvaliacao2")
+define("BASE_URL", "/LinguagemWeb/TrabAvaliacao2")
 ?>

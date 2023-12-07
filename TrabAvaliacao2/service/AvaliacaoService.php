@@ -23,6 +23,11 @@ class AvaliacaoService {
             array_push($erros, "Qual é a data que você esta fazendo essa publicação?");
         }
 
+        //Validar avaliacao
+        if(! $avaliacao->getAva()) {
+            array_push($erros, "Compartilhe sua avaliação ou opinião sobre o entretenimento. ");
+        }
+
          //Validar genero
          if(! $avaliacao->getGenero()) {
             array_push($erros, "Poderia especificar o gênero da publicação?");
@@ -33,10 +38,7 @@ class AvaliacaoService {
             array_push($erros, "Poderia especificar o tipo da publicação?");
         }
 
-         //Validar avaliacao
-         if(! $avaliacao->getAva()) {
-            array_push($erros, "Compartilhe sua avaliação ou opinião sobre o entretenimento. ");
-        }
+         
 
         
 
