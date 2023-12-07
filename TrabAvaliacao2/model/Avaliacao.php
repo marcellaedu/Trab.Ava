@@ -4,7 +4,7 @@ require_once(__DIR__ . "/Tipo.php");
 require_once(__DIR__ . "/Genero.php");
 
 
-class Avaliacao {
+class Avaliacao implements JsonSerializable {
 
     private ?int $id;
     private ?string $nomePessoa;
@@ -14,6 +14,17 @@ class Avaliacao {
     private ?Genero $genero;
     private ?string $ava;
    
+
+    public function jsonSerialize() : array {
+        return array("idAvaliacao" => $this->id,
+        "nome" => $this->nomePessoa,
+        "entretenimento" => $this->nomeEntretenimento,
+        "data" => $this->dataPublicacao,
+        "tipo" => $this->tipo,
+        "genero" => $this->genero,
+        "avaliacao" => $this->ava);
+    }
+
  
     public function __construct() {
         $this->id = 0;

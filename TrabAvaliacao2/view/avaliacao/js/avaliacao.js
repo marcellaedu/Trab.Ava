@@ -1,5 +1,4 @@
 const baseUrl = document.getElementById('hddBaseUrl').value;
-
 const inputTipo = document.getElementById('txtTipo');
 const inputGenero = document.getElementById('txtGenero');
 
@@ -52,13 +51,6 @@ function criarOptionGenero(desc, valor, valorSelecionado) {
     inputGenero.appendChild(option);
 }
 
-function mostrarDescricao(idDescricao) {
-    var divDescricao = document.getElementById(idDescricao);
-    if (divDescricao.style.display === 'none') {
-        divDescricao.style.display = 'block'; // Mostra a descrição correspondente ao botão clicado
-    } else {
-        divDescricao.style.display = 'none'; // Oculta a descrição correspondente ao botão clicado
-    }
-}
+
 
 

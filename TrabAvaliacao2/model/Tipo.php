@@ -1,11 +1,15 @@
 <?php
 
-class Tipo{
+class Tipo implements JsonSerializable{
 
     private ?int $id;
     private ?string $tipo;
 
-    
+    public function jsonSerialize() : array {
+        return array("id" => $this->id,
+        "tipo" => $this->tipo);
+    }
+
 
     /**
      * Get the value of id
