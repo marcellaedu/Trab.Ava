@@ -1,12 +1,5 @@
 const baseUrl = document.getElementById('hddBaseUrl').value;
 
-/*
-const inputNomePessoa = document.getElementById('txtNomePessoa').value;
-const inputEntretenimento = document.getElementById('txtnomeEntretenimento').value;
-const inputData = document.getElementById('txtDataPublicacao').value;
-const inputAvaliacao = document.getElementById('txtAvaliacao').value;
-*/
-
 const inputTipo = document.getElementById('txtTipo');
 const inputGenero = document.getElementById('txtGenero');
 
