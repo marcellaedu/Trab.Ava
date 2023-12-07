@@ -21,7 +21,19 @@ require(__DIR__ . "/../include/header.php");
     <a class="btn colors" href="inserir.php">Inserir</a>
 </div><br>
 
+<div id="discAva">
+    <div class="divAva">
+    <button class="btDiv btn btn-info" onclick="mostrarAva()">X</button>
 
+        <?php foreach($avaliacao as $a): ?>
+            <p><span>Nome:</span> <?= $a->getNomePessoa(); ?> &nbsp; &nbsp; &nbsp; <span>Data da publicação:</span> <?= $a->getDataPublicacao(); ?></p>
+            <p><span>Tipo:</span> <?= $a->getTipo()->getTipo(); ?> &nbsp; &nbsp; &nbsp; <span>Gênero:</span> <?= $a->getGenero(); ?></p>
+            <p><span>Entretenimento:</span> <?= $a->getNomeEntretenimento(); ?></p>
+            <p><span>Avaliação:</span> <?= $a->getAva(); ?></p>
+        <?php endforeach; ?>
+       
+    </div>
+</div>
 
 <table class="table table-hover">
     <thead>
@@ -38,7 +50,7 @@ require(__DIR__ . "/../include/header.php");
             <tr>
                 <td><?= $a->getNomePessoa(); ?></td>
                 <td><?= $a->getNomeEntretenimento(); ?></td>
-                <td style="text-align:justify;" onclick="mostrarDescricao('descricao<?= $a->getId() ?>')">
+                <td style="text-align:justify;" onclick="mostrarAva()">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
                     <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
                     <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"/>
@@ -58,34 +70,20 @@ require(__DIR__ . "/../include/header.php");
                     </a>
                 </td>
             </tr>
-
-            <td colspan="5">
-                <div id="descricao<?= $a->getId() ?>" style="display: none;">
-                    <div class="divAva">
-                        <p><span>Nome:</span> <?= $a->getNomePessoa(); ?> &nbsp; &nbsp; &nbsp; <span>Data da publicação:</span> <?= $a->getDataPublicacao(); ?></p>
-                        <p><span>Tipo:</span> <?= $a->getTipo()->getTipo(); ?> &nbsp; &nbsp; &nbsp; <span>Gênero:</span> <?= $a->getGenero(); ?></p>
-                        <p><span>Entretenimento:</span> <?= $a->getNomeEntretenimento(); ?></p>
-                        <p><span>Avaliação:</span> <?= $a->getAva(); ?></p>
-                    
-                    </div>
-                </div>
-            </td>
-           
-
         <?php endforeach; ?>
     </tbody>
 </table>
 
 <script>
-    
-function mostrarDescricao(idDescricao) {
-    var divDescricao = document.getElementById(idDescricao);
-    if (divDescricao.style.display === 'none') {
-        divDescricao.style.display = 'block'; // Mostra a descrição correspondente ao botão clicado
+    function mostrarAva() {
+    var div = document.getElementById('discAva');
+    if (div.style.display === 'none') {
+      div.style.display = 'block'; // Se a div estiver oculta, mostra ela
     } else {
-        divDescricao.style.display = 'none'; // Oculta a descrição correspondente ao botão clicado
+      div.style.display = 'none'; // Se a div estiver visível, oculta ela
     }
-}
+
+  }
 </script>
 
 <?php 

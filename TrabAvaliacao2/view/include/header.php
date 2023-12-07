@@ -17,6 +17,23 @@
             height: 100vh;
             /*font-family:  'Merriweather', serif;*/
         }
+        .divAva{
+            background-color:#2D9596;
+            /*background-color:#7ED7C1;*/
+            padding: 10px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+        span{
+            font-weight: bold;
+            color:#001C30;
+        }
+        .btDiv{
+            float: right;
+            background-color: transparent;
+            color: #001C30;
+            border-radius: 50%;
+        }
         .txt{
             color: #001C30;
             font-size: 30px;
@@ -24,7 +41,6 @@
         }
         .txt2{
             color: #001C30;
-
         }
         label{
             align-self: flex-start;

@@ -58,3 +58,5 @@ function criarOptionGenero(desc, valor, valorSelecionado) {
     
     inputGenero.appendChild(option);
 }
+
+
