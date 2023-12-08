@@ -42,7 +42,7 @@ class AvaliacaoDAO {
     public function save(Avaliacao $avaliacao) {
         $conn = Connection::getConnection();
 
-        $sql = "INSERT INTO avaliacao (mome_pessoa, nome_entretenimento, data_publicacao, id_genero , id_tipo , avaliacao  )".
+        $sql = "INSERT INTO avaliacao (nome_pessoa, nome_entretenimento, data_publicacao, id_genero , id_tipo , avaliacao  )".
             " VALUES (?, ?, ?, ?, ?, ?)";
         $stmt = $conn->prepare($sql);
         
