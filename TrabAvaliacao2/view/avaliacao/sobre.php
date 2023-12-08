@@ -4,8 +4,8 @@ require(__DIR__ . "/../include/header.php");
     <center>
         <div style="width: 50rem; margin-top: 35px; border-radius: 20px;">
             <div class="card-body">
-                <h5 class="card-title" style="color: #001C30; text-align: center;"><b>Um pouco sobre nós..</b></h5>
-                <p class="card-text" style="text-align:justify;">
+                <h5 class="card-title"><b class="txt">Um pouco sobre nós..</b></h5>
+                <p class="card-text" style="text-align:justify; font-size: 20px;">
                 Numa cidadezinha tranquila, duas amigas unidas por sua paixão por histórias em todas as suas formas, seja nos livros ou nos filmes que assistem juntas nos fins de semana, tiveram uma ideia brilhante. <br><br>
                 Elas sonhavam em criar um site dedicado a avaliações de todas as histórias que adoravam. Esse site seria um refúgio virtual para todos os entusiastas da leitura e do cinema, um lugar onde pudessem compartilhar suas opiniões, perspectivas e também fazer suas recomendações. <br><br>
                 Assim, essas amigas lançaram seu site, e logo suas análises cativaram a atenção de uma comunidade crescente de leitores e os amantes do cinema.  <br><br>

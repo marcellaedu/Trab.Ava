@@ -20,11 +20,10 @@
         .divAva{
             background-color:#2D9596;
             /*background-color:#7ED7C1;*/
-            padding: 10px;
+            padding: 20px;
             border-radius: 15px;
-            margin-bottom: 20px;
         }
-        span{
+        .negrito{
             font-weight: bold;
             color:#001C30;
         }
